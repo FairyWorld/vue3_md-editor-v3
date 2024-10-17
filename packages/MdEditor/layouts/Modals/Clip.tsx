@@ -168,6 +168,9 @@ export default defineComponent({
                 onClick={() => {
                   (uploadRef.value as HTMLInputElement).click();
                 }}
+                role="button"
+                tabindex="0"
+                aria-label={ult.value.imgTitleItem?.upload}
               >
                 <Icon name="upload" />
               </div>
@@ -204,6 +207,7 @@ export default defineComponent({
           type="file"
           multiple={false}
           style={{ display: 'none' }}
+          aria-hidden="true"
         />
       </Modal>
     );
